@@ -1,0 +1,23 @@
+.home-page {
+  position: relative;
+  width: 360px;
+  height: 1871px;
+  background: pink;
+}
+.top-background-image {
+  position: absolute;
+  width: 360px;
+  height: 194px;
+  left: 0px;
+  top: 0px;
+  background-image: url(../assets/top-image.png);
+}
+
+.youtube-icon {
+  position: absolute;
+  width: 160px;
+  height: 25.5px;
+  left: 100px;
+  top: 40.5px;
+  background-image: url(../assets/Group-1277.png);
+}
