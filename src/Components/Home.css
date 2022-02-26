@@ -21,3 +21,95 @@
   top: 40.5px;
   background-image: url(../assets/Group-1277.png);
 }
+.channel-logo {
+  position: absolute;
+  width: 51.18px;
+  height: 51.18px;
+  left: 83px;
+  top: 104px;
+}
+.channel-title {
+  position: absolute;
+  width: 98.1px;
+  height: 22.39px;
+  left: 146.34px;
+  top: 100px;
+
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14.9282px;
+  line-height: 150%;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+.back-arrow {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 20px;
+  top: 40px;
+  background-image: url(../assets/Back-arrow.png);
+}
+.subs-count {
+  position: absolute;
+  width: 75.71px;
+  height: 12.8px;
+  left: 146.98px;
+  top: 124px;
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 8.53042px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #f2f3f7;
+}
+.subs-vid-seperator {
+  position: absolute;
+  width: 2.13px;
+  height: 2.13px;
+  left: 218.88px;
+  top: 139.12px;
+  background: #f2f3f7;
+  background-image: url(../assets/Ellipse\ 371.png);
+}
+.video-count {
+  position: absolute;
+  width: 43.72px;
+  height: 12.8px;
+  left: 225.28px;
+  top: 124px;
+
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 8.53042px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #f2f3f7;
+}
+.summary-text {
+  position: absolute;
+  width: 67px;
+  height: 21px;
+  left: 20px;
+  top: 266px;
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #1d1d1f;
+}

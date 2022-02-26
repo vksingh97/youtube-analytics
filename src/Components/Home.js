@@ -26,6 +26,29 @@ const Home = () => {
     <div className="home-page">
       <div className="top-background-image">
         <div className="youtube-icon"></div>
+        <span className="back-arrow"></span>
+        <div className="channel-info">
+          <img
+            className="channel-logo"
+            src={data ? data.metadata.thumbnailUrl : null}
+            alt="channel-logo"
+          ></img>
+          <h2 className="channel-title">
+            {data ? data.metadata.channelName : null}
+          </h2>
+          <p className="subs-count">
+            {`${data ? data.metadata.subscribersCount : null} subscribers`}
+          </p>
+          <span className="subs-vid-seperator"></span>
+          <p className="video-count">{`${
+            data ? data.metadata.videoCount : null
+          } videos`}</p>
+        </div>
+      </div>
+      <div className="channel-overview">
+        <div className="channel-summary">
+          <h2 className="summary-text">Summary</h2>
+        </div>
       </div>
     </div>
   );
