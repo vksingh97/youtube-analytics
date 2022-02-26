@@ -4,7 +4,7 @@ import fetch from "cross-fetch";
 import "./Home.css";
 const Home = () => {
   const [data, setData] = useState(null);
-  useEffect(() => {
+  const fetchData = () => {
     fetch(
       "https://qorner-mock-server.herokuapp.com/stats?startDate=2021-01-01&endDate=2021-01-31"
     )
@@ -16,15 +16,16 @@ const Home = () => {
       })
       .then((data) => {
         setData(data);
-        console.log(data);
       })
       .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    fetchData();
   }, []);
   return (
     <div className="home-page">
       <div className="top-background-image">
         <div className="youtube-icon"></div>
-        {/* <p>{data.metadata.channelName}</p> */}
       </div>
     </div>
   );
