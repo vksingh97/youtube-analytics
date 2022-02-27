@@ -1,4 +1,5 @@
 import React from "react";
+import AudienceLineChart from "./AudienceLineChart";
 
 const AudienceComponent = ({ data }) => {
   return (
@@ -34,6 +35,15 @@ const AudienceComponent = ({ data }) => {
           </h2>
         )
       ) : null}
+      <span
+        className="audience-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Percentage of subscribed views to total views"
+      ></span>
+      <div className="audience-canvas">
+        <AudienceLineChart />
+      </div>
     </div>
   );
 };

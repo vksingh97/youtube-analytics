@@ -20,8 +20,9 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-let time, revenueVal;
-const RevenueLineChart = () => {
+
+let time, subsVal, unSubsVal;
+const AudienceLineChart = () => {
   const fetchData = () => {
     return fetch(
       "https://qorner-mock-server.herokuapp.com/stats?startDate=2021-01-01&endDate=2021-01-31"
@@ -39,12 +40,18 @@ const RevenueLineChart = () => {
   };
   useEffect(() => {
     fetchData().then((items) => {
-      time = items.revenueDetails.estimatedRevenueTrend.data.map(
-        (index) => index.date
-      );
-      revenueVal = items.revenueDetails.estimatedRevenueTrend.data.map(
-        (index) => index.value1
-      );
+      time =
+        items.audienceDetails.viewsSubscriberVsNonSubscribersTrend.data.map(
+          (index) => index.date
+        );
+      subsVal =
+        items.audienceDetails.viewsSubscriberVsNonSubscribersTrend.data.map(
+          (index) => index.value1
+        );
+      unSubsVal =
+        items.audienceDetails.viewsSubscriberVsNonSubscribersTrend.data.map(
+          (index) => index.value2
+        );
     });
   }, []);
 
@@ -52,12 +59,20 @@ const RevenueLineChart = () => {
     labels: time,
     datasets: [
       {
-        label: "Revenue",
-        data: revenueVal,
+        label: "subscribed",
+        data: subsVal,
         borderColor: ["rgba(49, 228, 152, 1)"],
         backgroundColor: ["rgba(49, 228, 152, 1)"],
         pointBackgroundColor: ["rgba(49, 228, 152, 1)"],
         pointBorderColor: ["rgba(49, 228, 152, 1)"],
+      },
+      {
+        label: "unsubscribed",
+        data: unSubsVal,
+        borderColor: ["rgba(255, 92, 0, 1)"],
+        backgroundColor: ["rgba(255, 92, 0, 1)"],
+        pointBackgroundColor: ["rgba(255, 92, 0, 1)"],
+        pointBorderColor: ["rgba(255, 92, 0, 1)"],
       },
     ],
   };
@@ -78,4 +93,4 @@ const RevenueLineChart = () => {
   return <Line data={chartData} options={options} />;
 };
 
-export default RevenueLineChart;
+export default AudienceLineChart;

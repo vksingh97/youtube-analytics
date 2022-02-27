@@ -592,3 +592,19 @@
 
   color: red;
 }
+.audience-info {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-size: 8px;
+  left: 75px;
+  top: 1509px;
+  background-image: url(../assets/fi-rs-info.png);
+}
+.audience-canvas {
+  position: absolute;
+  width: 251.5px;
+  height: 199px;
+  left: 53px;
+  top: 1576px;
+}
