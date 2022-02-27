@@ -3,11 +3,11 @@ import fetch from "cross-fetch";
 import "./styles.css";
 import SummaryComponent from "./SummaryComponent";
 import RevenueComponent from "./RevenueComponent";
-
+let time = [];
 const Home = () => {
   const [data, setData] = useState(null);
   const fetchData = () => {
-    fetch(
+    return fetch(
       "https://qorner-mock-server.herokuapp.com/stats?startDate=2021-01-01&endDate=2021-01-31"
     )
       .then((res) => {
@@ -18,11 +18,17 @@ const Home = () => {
       })
       .then((data) => {
         setData(data);
+        return data;
       })
       .catch((err) => console.log(err));
   };
   useEffect(() => {
-    fetchData();
+    fetchData().then((items) => {
+      time = items.revenueDetails.estimatedRevenueTrend.data.map(
+        (index) => index.date
+      );
+      console.log(time);
+    });
   }, []);
   return (
     <div className="home-page">
