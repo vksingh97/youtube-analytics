@@ -7,7 +7,10 @@ const ReachComponent = ({ data }) => {
       <span className="reach-card" />
       <h2 className="reach-engangment-text">Views</h2>
       <h2 className="reach-engagement-value">
-        {data ? data.reachAndEngagementDetails.viewsTrend.value : null}
+        {data
+          ? data.reachAndEngagementDetails.viewsTrend.value +
+            data.reachAndEngagementDetails.viewsTrend.change.value
+          : null}
       </h2>
       {data ? (
         data.reachAndEngagementDetails.viewsTrend.change.percentage >= 0 ? (

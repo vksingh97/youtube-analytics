@@ -4,6 +4,7 @@ import "./styles.css";
 import SummaryComponent from "./SummaryComponent";
 import RevenueComponent from "./RevenueComponent";
 import ReachComponent from "./ReachComponent";
+import AudienceComponent from "./AudienceComponent";
 let time = [];
 let revenueVal = [];
 const Home = () => {
@@ -61,6 +62,7 @@ const Home = () => {
         <SummaryComponent data={data} />
         <RevenueComponent data={data} />
         <ReachComponent data={data} />
+        <AudienceComponent data={data} />
       </div>
     </div>
   );
