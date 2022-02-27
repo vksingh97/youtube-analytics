@@ -71,12 +71,13 @@ const RevenueLineChart = ({ newDate }) => {
       text: "Line Chart",
     },
     scales: {
-      // y: [
-      //   {
-      //     display: true,
-      //     beginAtZero: true,
-      //   },
-      // ],
+      yAxes: [
+        {
+          gridLined: {
+            color: "rgba(0, 0, 0, 0)",
+          },
+        },
+      ],
     },
   };
   return <Line data={chartData} options={options} />;

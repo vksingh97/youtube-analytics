@@ -19,6 +19,7 @@ const Home = () => {
     indexStartDate = date1.indexOf(startDate);
     indexEndDate = date1.indexOf(endDate);
     changedDate = date1.slice(indexStartDate, indexEndDate + 1);
+    console.log(changedDate);
     setNewDate(changedDate);
   };
   const fetchData = () => {
@@ -84,6 +85,12 @@ const Home = () => {
         min="2022-01-01"
         max="2022-01-31"
       ></input>
+
+      <h2 className="date-tag-1">Jan 01-31,{""}2022</h2>
+      <h2 className="date-tag-2">Jan 01-31,{""}2022</h2>
+      <h2 className="date-tag-3">Jan 01-31,{""}2022</h2>
+      <h2 className="date-tag-4">Jan 01-31,{""}2022</h2>
+
       <div className="channel-overview">
         <SummaryComponent data={data} newDate={changedDate} />
         <RevenueComponent data={data} newDate={changedDate} />

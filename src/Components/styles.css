@@ -99,19 +99,19 @@
 }
 #startDate {
   position: absolute;
-  top: 260px;
-  left: 150px;
-  width: 25%;
-  font-size: 5px;
-  height: 10px;
+  top: 270px;
+  left: 140px;
+  width: 26%;
+  font-size: 8px;
+  height: 15px;
 }
 #endDate {
   position: absolute;
-  top: 260px;
+  top: 270px;
   left: 240px;
-  width: 25%;
-  font-size: 5px;
-  height: 10px;
+  width: 26%;
+  font-size: 8px;
+  height: 15px;
 }
 #date-button {
   position: absolute;
@@ -631,4 +631,91 @@
   height: 199px;
   left: 53px;
   top: 1576px;
+}
+.date-tag-1 {
+  position: absolute;
+  width: 76px;
+  height: 18px;
+  left: 20px;
+  top: 287px;
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 150%;
+  /* identical to box height, or 18px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* Grey/Secondary text */
+
+  color: #9a9a9a;
+}
+.date-tag-2 {
+  position: absolute;
+  width: 76px;
+  height: 18px;
+  left: 20px;
+  top: 476px;
+
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 150%;
+  /* identical to box height, or 18px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* Grey/Secondary text */
+
+  color: #9a9a9a;
+}
+.date-tag-3 {
+  position: absolute;
+  width: 76px;
+  height: 18px;
+  left: 20px;
+  top: 936px;
+
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 150%;
+  /* identical to box height, or 18px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* Grey/Secondary text */
+
+  color: #9a9a9a;
+}
+.date-tag-4 {
+  position: absolute;
+  width: 76px;
+  height: 18px;
+  left: 20px;
+  top: 1406px;
+
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 150%;
+  /* identical to box height, or 18px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* Grey/Secondary text */
+
+  color: #9a9a9a;
 }
