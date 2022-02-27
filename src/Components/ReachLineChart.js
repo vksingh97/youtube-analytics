@@ -62,7 +62,7 @@ const ReachLineChart = ({ newDate }) => {
         backgroundColor: ["rgba(49, 228, 152, 1)"],
         pointBackgroundColor: ["rgba(49, 228, 152, 1)"],
         pointBorderColor: ["rgba(49, 228, 152, 1)"],
-        lineTension: 0.8,
+        lineTension: 0.5,
       },
     ],
   };
@@ -72,12 +72,20 @@ const ReachLineChart = ({ newDate }) => {
       text: "Line Chart",
     },
     scales: {
-      // y: [
-      //   {
-      //     display: true,
-      //     beginAtZero: true,
-      //   },
-      // ],
+      y: {
+        display: true,
+        beginAtZero: true,
+
+        title: {
+          display: true,
+          text: "Views",
+        },
+        max: 1000,
+        min: 0,
+        ticks: {
+          stepSize: 100,
+        },
+      },
     },
   };
   return <Line data={reachData} options={options} />;

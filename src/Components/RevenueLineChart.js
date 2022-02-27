@@ -71,13 +71,21 @@ const RevenueLineChart = ({ newDate }) => {
       text: "Line Chart",
     },
     scales: {
-      yAxes: [
-        {
-          gridLined: {
-            color: "rgba(0, 0, 0, 0)",
-          },
+      yAxes: {
+        display: true,
+        gridLined: {
+          color: "rgba(0, 0, 0, 0)",
         },
-      ],
+        title: {
+          display: true,
+          text: "INR",
+        },
+        max: 100,
+        min: 0,
+        ticks: {
+          stepSize: 10,
+        },
+      },
     },
   };
   return <Line data={chartData} options={options} />;

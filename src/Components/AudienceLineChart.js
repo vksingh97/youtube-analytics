@@ -70,7 +70,7 @@ const AudienceLineChart = ({ newDate }) => {
         pointBorderColor: ["rgba(49, 228, 152, 1)"],
       },
       {
-        label: "unsubscribed",
+        label: "Non subscribed",
         data: unSubsVal,
         borderColor: ["rgba(255, 92, 0, 1)"],
         backgroundColor: ["rgba(255, 92, 0, 1)"],
@@ -80,17 +80,8 @@ const AudienceLineChart = ({ newDate }) => {
     ],
   };
   const options = {
-    title: {
-      display: true,
-      text: "Line Chart",
-    },
     scales: {
-      // y: [
-      //   {
-      //     display: true,
-      //     beginAtZero: true,
-      //   },
-      // ],
+      y: {},
     },
   };
   return <Line data={chartData} options={options} />;
