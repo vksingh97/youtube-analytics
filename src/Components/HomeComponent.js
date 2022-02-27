@@ -3,7 +3,9 @@ import fetch from "cross-fetch";
 import "./styles.css";
 import SummaryComponent from "./SummaryComponent";
 import RevenueComponent from "./RevenueComponent";
+import ReachComponent from "./ReachComponent";
 let time = [];
+let revenueVal = [];
 const Home = () => {
   const [data, setData] = useState(null);
   const fetchData = () => {
@@ -27,7 +29,9 @@ const Home = () => {
       time = items.revenueDetails.estimatedRevenueTrend.data.map(
         (index) => index.date
       );
-      console.log(time);
+      revenueVal = items.revenueDetails.estimatedRevenueTrend.data.map(
+        (index) => index.value1
+      );
     });
   }, []);
   return (
@@ -56,9 +60,11 @@ const Home = () => {
       <div className="channel-overview">
         <SummaryComponent data={data} />
         <RevenueComponent data={data} />
+        <ReachComponent data={data} />
       </div>
     </div>
   );
 };
 
 export default Home;
+export { time, revenueVal };

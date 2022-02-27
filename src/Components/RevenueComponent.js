@@ -1,5 +1,5 @@
 import React from "react";
-import LineChart from "./LineChart";
+import RevenueLineChart from "./RevenueLineChart";
 
 const RevenueComponent = ({ data }) => {
   return (
@@ -38,7 +38,7 @@ const RevenueComponent = ({ data }) => {
         {data ? data.revenueDetails.estimatedRevenueTrend.change.info : null}
       </p>
       <div className="revenue-canvas">
-        <LineChart />
+        <RevenueLineChart data={data} />
       </div>
     </div>
   );

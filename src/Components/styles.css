@@ -2,7 +2,7 @@
   position: relative;
   width: 360px;
   height: 1871px;
-  background: coral;
+  background: white;
 }
 .top-background-image {
   position: absolute;
@@ -350,4 +350,130 @@
   height: 172px;
   left: 40px;
   top: 631px;
+}
+.reach-text {
+  position: absolute;
+  width: 149px;
+  height: 21px;
+  left: 20px;
+  top: 915px;
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #1d1d1f;
+}
+.reach-card {
+  position: absolute;
+  width: 320px;
+  height: 330px;
+  left: 20px;
+  top: 974px;
+
+  background: #ffffff;
+  box-shadow: -6px -6px 12px rgba(244, 244, 244, 0.43),
+    6px 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.reach-engangment-text {
+  position: absolute;
+  width: 31px;
+  height: 15px;
+  left: 42px;
+  top: 989px;
+
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 150%;
+  /* identical to box height, or 15px */
+
+  display: flex;
+  align-items: center;
+
+  /* Grey/Secondary text */
+
+  color: #9a9a9a;
+}
+.reach-engagement-value {
+  position: absolute;
+  width: 103px;
+  height: 36px;
+  left: 41px;
+  top: 1004px;
+
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  /* identical to box height, or 36px */
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.reach-change-positive {
+  position: absolute;
+  width: 127px;
+  height: 21px;
+  left: 42px;
+  top: 1032px;
+
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 120%;
+  /* or 12px */
+
+  display: flex;
+  align-items: center;
+
+  /* Green / Secondary */
+
+  color: #11ac6a;
+}
+.reach-change-negative {
+  position: absolute;
+  width: 127px;
+  height: 21px;
+  left: 42px;
+  top: 1032px;
+
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 120%;
+  /* or 12px */
+
+  display: flex;
+  align-items: center;
+
+  /* Green / Secondary */
+
+  color: red;
+}
+.reach-info {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 80px;
+  background-size: 8px;
+  top: 1039px;
+  background-image: url(../assets/fi-rs-info.png);
+}
+.reach-canvas {
+  position: absolute;
+  width: 262px;
+  height: 172px;
+  left: 47px;
+  top: 1097px;
 }
