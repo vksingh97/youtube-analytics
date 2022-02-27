@@ -2,7 +2,7 @@
   position: relative;
   width: 360px;
   height: 1871px;
-  background: pink;
+  background: white;
 }
 .top-background-image {
   position: absolute;
@@ -35,7 +35,7 @@
   left: 146.34px;
   top: 100px;
 
-  font-family: Encode Sans;
+  font-family: "Encode Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 14.9282px;
@@ -61,7 +61,7 @@
   height: 12.8px;
   left: 146.98px;
   top: 124px;
-  font-family: Encode Sans;
+  font-family: "Encode Sans";
   font-style: normal;
   font-weight: 500;
   font-size: 8.53042px;
@@ -76,7 +76,7 @@
   width: 2.13px;
   height: 2.13px;
   left: 218.88px;
-  top: 139.12px;
+  top: 130.12px;
   background: #f2f3f7;
   background-image: url(../assets/Ellipse\ 371.png);
 }
@@ -87,7 +87,7 @@
   left: 225.28px;
   top: 124px;
 
-  font-family: Encode Sans;
+  font-family: "Encode Sans";
   font-style: normal;
   font-weight: 500;
   font-size: 8.53042px;
@@ -103,6 +103,129 @@
   height: 21px;
   left: 20px;
   top: 266px;
+  font-family: "Encode Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #1d1d1f;
+}
+.summary-card {
+  position: absolute;
+  width: 320px;
+  height: 90px;
+  left: 20px;
+  top: 325px;
+
+  background: #ffffff;
+  box-shadow: -6px -6px 12px rgba(244, 244, 244, 0.43),
+    6px 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.summary-card-subscribers {
+  position: absolute;
+  width: 58px;
+  height: 15px;
+  left: 41px;
+  top: 341px;
+  font-family: "Encode Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  color: #9a9a9a;
+}
+.summary-card-views {
+  position: absolute;
+  width: 31px;
+  height: 15px;
+  left: 148px;
+  top: 341px;
+
+  font-family: "Encode Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  color: #9a9a9a;
+}
+
+.summary-card-revenue {
+  position: absolute;
+  width: 43px;
+  height: 15px;
+  left: 241px;
+  top: 341px;
+  font-family: "Encode Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  color: #9a9a9a;
+}
+.summary-card-subscribers-count {
+  position: absolute;
+  width: 57px;
+  height: 27px;
+  left: 40px;
+  top: 353px;
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.summary-card-views-count {
+  position: absolute;
+  width: 48px;
+  height: 27px;
+  left: 147px;
+  top: 353px;
+  font-family: "Encode Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.summary-card-revenue-count {
+  position: absolute;
+  width: 47px;
+  height: 27px;
+  left: 240px;
+  top: 353px;
+
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.revenue-text {
+  position: absolute;
+  width: 60px;
+  height: 21px;
+  left: 20px;
+  top: 455px;
+
   font-family: Encode Sans;
   font-style: normal;
   font-weight: 600;
@@ -112,4 +235,30 @@
   align-items: center;
   text-align: center;
   color: #1d1d1f;
+}
+.revenue-card {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  left: 20px;
+  top: 514px;
+  background: #ffffff;
+  box-shadow: -6px -6px 12px rgba(244, 244, 244, 0.43),
+    6px 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.estimated-revenue-text {
+  position: absolute;
+  width: 96px;
+  height: 15px;
+  left: 43px;
+  top: 527px;
+  font-family: "Encode Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  color: #9a9a9a;
 }
