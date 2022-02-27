@@ -2,7 +2,7 @@
   position: relative;
   width: 360px;
   height: 1871px;
-  background: white;
+  background: coral;
 }
 .top-background-image {
   position: absolute;
@@ -261,4 +261,86 @@
   display: flex;
   align-items: center;
   color: #9a9a9a;
+}
+.estimated-revenue-value {
+  position: absolute;
+  width: 80px;
+  height: 36px;
+  left: 42px;
+  top: 542px;
+
+  font-family: "Encode Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  /* identical to box height, or 36px */
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.estimated-revenue-change-positive {
+  position: absolute;
+  width: 29px;
+  height: 21px;
+  left: 43px;
+  top: 571px;
+  font-family: "Encode Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #11ac6a;
+}
+.estimated-revenue-change-negative {
+  position: absolute;
+  width: 29px;
+  height: 21px;
+  left: 43px;
+  top: 571px;
+  font-family: "Encode Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: red;
+}
+.revenue-info {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-size: 8px;
+  left: 75px;
+  top: 578px;
+  background-image: url(../assets/fi-rs-info.png);
+  color: #9a9a9a;
+}
+.revenue-change-info-box {
+  position: absolute;
+  width: 67px;
+  height: 21px;
+  left: 83px;
+  top: 582px;
+  background: #ebfff7;
+  border-radius: 3px;
+}
+.revenue-change-info-text {
+  position: absolute;
+  width: 50px;
+  height: 10px;
+  left: 87px;
+  top: 587px;
+  font-family: "Encode Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 5px;
+  line-height: 10px;
+  text-align: center;
+  color: #000000;
 }

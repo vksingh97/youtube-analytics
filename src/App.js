@@ -1,5 +1,5 @@
 import "./App.css";
-import Home from "./Components/Home";
+import Home from "./Components/HomeComponent";
 import "@fontsource/encode-sans";
 function App() {
   return (

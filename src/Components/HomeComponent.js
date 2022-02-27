@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import fetch from "cross-fetch";
-import "./Home.css";
+import "./styles.css";
+import SummaryComponent from "./SummaryComponent";
+import RevenueComponent from "./RevenueComponent";
+
 const Home = () => {
   const [data, setData] = useState(null);
   const fetchData = () => {
@@ -45,31 +48,8 @@ const Home = () => {
         </div>
       </div>
       <div className="channel-overview">
-        <div className="channel-summary">
-          <h2 className="summary-text">Summary</h2>
-          <span className="summary-card" />
-          <h2 className="summary-card-subscribers">Subscribers</h2>
-          <h2 className="summary-card-views">Views</h2>
-          <h2 className="summary-card-revenue">Revenue</h2>
-          <h2 className="summary-card-subscribers-count">
-            {data ? data.summary.subscribers : null}
-          </h2>
-          <h2 className="summary-card-views-count">
-            {data ? data.summary.views : null}
-          </h2>
-          <h2 className="summary-card-revenue-count">
-            &#x20b9;
-            {data ? data.summary.revenue : null}
-          </h2>
-        </div>
-        <div className="channel-revenue">
-          <h2 className="revenue-text">Revenue</h2>
-          <span className="revenue-card" />
-          <h2 className="estimated-revenue-text">Estimated Revenue</h2>
-          <h2 className="estimated-revenue-value">
-            {data ? data.revenueDetails.estimatedRevenueTrend.value : null}
-          </h2>
-        </div>
+        <SummaryComponent data={data} />
+        <RevenueComponent data={data} />
       </div>
     </div>
   );
