@@ -10,7 +10,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-
+import { changedDate } from "./HomeComponent";
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -21,7 +21,7 @@ ChartJS.register(
   Legend
 );
 let time, reachVal;
-const ReachLineChart = () => {
+const ReachLineChart = ({ newDate }) => {
   const fetchData = () => {
     return fetch(
       "https://qorner-mock-server.herokuapp.com/stats?startDate=2021-01-01&endDate=2021-01-31"
@@ -39,9 +39,13 @@ const ReachLineChart = () => {
   };
   useEffect(() => {
     fetchData().then((items) => {
-      time = items.reachAndEngagementDetails.viewsTrend.data.map(
-        (index) => index.date
-      );
+      if (newDate.length > 0) {
+        time = [...newDate];
+      } else {
+        time = items.reachAndEngagementDetails.viewsTrend.data.map(
+          (index) => index.date
+        );
+      }
       reachVal = items.reachAndEngagementDetails.viewsTrend.data.map(
         (index) => index.value1
       );
@@ -49,7 +53,7 @@ const ReachLineChart = () => {
   }, []);
 
   const reachData = {
-    labels: time,
+    labels: changedDate.length > 0 ? changedDate : time,
     datasets: [
       {
         label: "Reach",

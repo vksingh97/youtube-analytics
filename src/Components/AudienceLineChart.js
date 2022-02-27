@@ -10,7 +10,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-
+import { changedDate } from "./HomeComponent";
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -22,7 +22,7 @@ ChartJS.register(
 );
 
 let time, subsVal, unSubsVal;
-const AudienceLineChart = () => {
+const AudienceLineChart = ({ newDate }) => {
   const fetchData = () => {
     return fetch(
       "https://qorner-mock-server.herokuapp.com/stats?startDate=2021-01-01&endDate=2021-01-31"
@@ -40,10 +40,13 @@ const AudienceLineChart = () => {
   };
   useEffect(() => {
     fetchData().then((items) => {
-      time =
-        items.audienceDetails.viewsSubscriberVsNonSubscribersTrend.data.map(
+      if (newDate.length > 0) {
+        time = [...newDate];
+      } else {
+        time = items.revenueDetails.estimatedRevenueTrend.data.map(
           (index) => index.date
         );
+      }
       subsVal =
         items.audienceDetails.viewsSubscriberVsNonSubscribersTrend.data.map(
           (index) => index.value1
@@ -56,7 +59,7 @@ const AudienceLineChart = () => {
   }, []);
 
   const chartData = {
-    labels: time,
+    labels: changedDate.length > 0 ? changedDate : time,
     datasets: [
       {
         label: "subscribed",

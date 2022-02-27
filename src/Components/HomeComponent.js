@@ -11,6 +11,7 @@ let indexStartDate, indexEndDate;
 let changedDate = [];
 const Home = () => {
   const [data, setData] = useState(null);
+  const [newDate, setNewDate] = useState(null);
   const filterDate = () => {
     const date1 = [...time];
     const startDate = document.getElementById("startDate").value;
@@ -18,7 +19,7 @@ const Home = () => {
     indexStartDate = date1.indexOf(startDate);
     indexEndDate = date1.indexOf(endDate);
     changedDate = date1.slice(indexStartDate, indexEndDate + 1);
-    console.log(changedDate);
+    setNewDate(changedDate);
   };
   const fetchData = () => {
     return fetch(
@@ -86,8 +87,8 @@ const Home = () => {
       <div className="channel-overview">
         <SummaryComponent data={data} newDate={changedDate} />
         <RevenueComponent data={data} newDate={changedDate} />
-        <ReachComponent data={data} />
-        <AudienceComponent data={data} />
+        <ReachComponent data={data} newDate={changedDate} />
+        <AudienceComponent data={data} newDate={changedDate} />
       </div>
     </div>
   );

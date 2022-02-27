@@ -21,7 +21,7 @@ ChartJS.register(
   Legend
 );
 let time, revenueVal;
-const RevenueLineChart = ({ data, newDate }) => {
+const RevenueLineChart = ({ newDate }) => {
   const fetchData = () => {
     return fetch(
       "https://qorner-mock-server.herokuapp.com/stats?startDate=2021-01-01&endDate=2021-01-31"
@@ -41,7 +41,6 @@ const RevenueLineChart = ({ data, newDate }) => {
     fetchData().then((items) => {
       if (newDate.length > 0) {
         time = [...newDate];
-        // revenueVal = items.revenueDetails.estimatedRevenueTrend.data.filter((index)=>time[])
       } else {
         time = items.revenueDetails.estimatedRevenueTrend.data.map(
           (index) => index.date

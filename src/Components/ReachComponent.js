@@ -1,6 +1,6 @@
 import React from "react";
 import ReachLineChart from "./ReachLineChart";
-const ReachComponent = ({ data }) => {
+const ReachComponent = ({ data, newDate }) => {
   return (
     <div className="channel-reach">
       <h2 className="reach-text">Reach & engagment</h2>
@@ -32,7 +32,7 @@ const ReachComponent = ({ data }) => {
         title="Percentage change in reach"
       ></span>
       <div className="reach-canvas">
-        <ReachLineChart />
+        <ReachLineChart newDate={newDate} />
       </div>
     </div>
   );

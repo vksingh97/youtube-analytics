@@ -1,7 +1,7 @@
 import React from "react";
 import AudienceLineChart from "./AudienceLineChart";
 
-const AudienceComponent = ({ data }) => {
+const AudienceComponent = ({ data, newDate }) => {
   return (
     <div className="channel-audience">
       <h2 className="audience-text">Audience</h2>
@@ -42,7 +42,7 @@ const AudienceComponent = ({ data }) => {
         title="Percentage of subscribed views to total views"
       ></span>
       <div className="audience-canvas">
-        <AudienceLineChart />
+        <AudienceLineChart newDate={newDate} />
       </div>
     </div>
   );
