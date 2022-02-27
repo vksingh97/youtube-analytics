@@ -97,6 +97,22 @@
   text-align: center;
   color: #f2f3f7;
 }
+#startDate {
+  position: absolute;
+  top: 260px;
+  left: 150px;
+  width: 25%;
+  font-size: 5px;
+  height: 10px;
+}
+#endDate {
+  position: absolute;
+  top: 260px;
+  left: 240px;
+  width: 25%;
+  font-size: 5px;
+  height: 10px;
+}
 .summary-text {
   position: absolute;
   width: 67px;

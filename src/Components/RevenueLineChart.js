@@ -10,7 +10,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-
+import { changedDate } from "./HomeComponent";
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -21,7 +21,7 @@ ChartJS.register(
   Legend
 );
 let time, revenueVal;
-const RevenueLineChart = () => {
+const RevenueLineChart = ({ data, newDate }) => {
   const fetchData = () => {
     return fetch(
       "https://qorner-mock-server.herokuapp.com/stats?startDate=2021-01-01&endDate=2021-01-31"
@@ -39,9 +39,14 @@ const RevenueLineChart = () => {
   };
   useEffect(() => {
     fetchData().then((items) => {
-      time = items.revenueDetails.estimatedRevenueTrend.data.map(
-        (index) => index.date
-      );
+      if (newDate.length > 0) {
+        time = [...newDate];
+        // revenueVal = items.revenueDetails.estimatedRevenueTrend.data.filter((index)=>time[])
+      } else {
+        time = items.revenueDetails.estimatedRevenueTrend.data.map(
+          (index) => index.date
+        );
+      }
       revenueVal = items.revenueDetails.estimatedRevenueTrend.data.map(
         (index) => index.value1
       );
@@ -49,7 +54,7 @@ const RevenueLineChart = () => {
   }, []);
 
   const chartData = {
-    labels: time,
+    labels: changedDate.length > 0 ? changedDate : time,
     datasets: [
       {
         label: "Revenue",
