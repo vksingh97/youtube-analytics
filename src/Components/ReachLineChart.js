@@ -58,6 +58,7 @@ const ReachLineChart = () => {
         backgroundColor: ["rgba(49, 228, 152, 1)"],
         pointBackgroundColor: ["rgba(49, 228, 152, 1)"],
         pointBorderColor: ["rgba(49, 228, 152, 1)"],
+        lineTension: 0.8,
       },
     ],
   };
