@@ -19,7 +19,6 @@ const Home = () => {
     indexStartDate = date1.indexOf(startDate);
     indexEndDate = date1.indexOf(endDate);
     changedDate = date1.slice(indexStartDate, indexEndDate + 1);
-    console.log(changedDate);
     setNewDate(changedDate);
   };
   const fetchData = () => {
